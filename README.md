@@ -40,4 +40,5 @@ truffle migrate --network development
 
 ## Testing frontend
 - launch web-server with command: http-server
-- Visit url with browser having metamask installed, unlocked and connected to the right network
+- Visit url with browser having metamask installed, unlocked and connected to it to Rinkeby network
+- In the console create your first zombie bt typing: createRandomZombie("SOME NAME")
