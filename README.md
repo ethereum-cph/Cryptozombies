@@ -5,6 +5,8 @@ https://www.meetup.com/Copenhagen-Ethereum-Meetup/events/249664436/
 https://cryptozombies.io/
 - The content of the tutorial is described here:
 https://sphere.social/hello/blogs/view/4717/create-cryptozombies-and-learn-solidity
+- Great guide in the web3 implementation
+https://medium.com/coinmonks/solidity-and-web3-js-141115b0f8c5
 
 ## Development tools:
 

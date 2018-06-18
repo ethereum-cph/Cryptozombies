@@ -16,18 +16,14 @@
       var userAccount;
 
       function startApp() {
-        var cryptoZombiesAddress = "0xc8bed61ce2f0cb0e216dd870a50a024ac0cd6c16";
-        cryptoZombies = new web3js.eth.contract(cryptoZombiesABI, cryptoZombiesAddress);
+        //var cryptoZombiesAddress = "0x7b12a95fe908e67cb73a043e8fa7fa5c70f6c4b3"; //lokal
+        var cryptoZombiesAddress = "0x4101cfc93b9d2a3aadac9ab7c836f2e84f13fb3f"; //rinkeby
+        cryptoZombies = new web3js.eth.Contract(cryptoZombiesABI, cryptoZombiesAddress);
 
-        var accountInterval = setInterval(function() {
-          
-          if (web3.eth.accounts[0] !== userAccount) {
-            userAccount = web3.eth.accounts[0];
-            
-            getZombiesByOwner(userAccount)
+        web3.eth.getAccounts(function (err, accounts) {userAccount=accounts[0];});
+
+        getZombiesByOwner(userAccount)
             .then(displayZombies);
-          }
-        }, 100);
 
         cryptoZombies.events.Transfer({ filter: { _to: userAccount } })
         .on("data", function(event) {
@@ -63,7 +59,7 @@
         
         $("#txStatus").text("Creating new zombie on the blockchain. This may take a while...");
         
-        return CryptoZombies.methods.createRandomZombie(name)
+        return cryptoZombies.methods.createRandomZombie(name)
         .send({ from: userAccount })
         .on("receipt", function(receipt) {
           $("#txStatus").text("Successfully created " + name + "!");
@@ -115,16 +111,13 @@
 
       window.addEventListener('load', function() {
 
-        
-        if (typeof web3 !== 'undefined') {
-          
-          web3js = new Web3(web3.currentProvider);
-        } else {
-          
-          
-        }
+          if (typeof web3 !== 'undefined') {
+            web3js = new Web3(web3.currentProvider);
+          } else {
+              web3js = new Web3(new Web3.providers.HttpProvider("HTTP://127.0.0.1:7545"));
+          }
 
-        
+
         startApp()
 
       })
