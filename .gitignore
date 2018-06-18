@@ -1,0 +1,6 @@
+node_modules/
+frontend-test/
+build/
+.idea/
+tmp/
+package-lock.json
