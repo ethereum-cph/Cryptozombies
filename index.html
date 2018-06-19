@@ -109,6 +109,23 @@
         return cryptoZombies.methods.getZombiesByOwner(owner).call()
       }
 
+      function transferZombie(receiver, id) {
+
+
+          $("#txStatus").text("Transfering your zombie on the blockchain. This may take a while...");
+
+          return cryptoZombies.methods.transfer(receiver, id)
+              .send({ from: userAccount })
+              .on("receipt", function(receipt) {
+                  $("#txStatus").text("Successfully transfered to " + receiver + "!");
+
+                  getZombiesByOwner(receiver).then(displayZombies);
+              })
+              .on("error", function(error) {
+
+                  $("#txStatus").text(error);
+              });
+      }
       window.addEventListener('load', function() {
 
           if (typeof web3 !== 'undefined') {
