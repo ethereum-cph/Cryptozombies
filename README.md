@@ -10,7 +10,7 @@ https://medium.com/coinmonks/solidity-and-web3-js-141115b0f8c5
 
 ## Development tools:
 
-- Install Ganache https://truffleframework.com/ganache/
+- Install Ganache http://truffleframework.com/ganache/
 - Install node & npm https://nodejs.org/en/ (version 8 or 9 is fine)
 - Install truffle from the command line: `npm install -g truffle`
 - Install a text editor https://confluence.jetbrains.com/display/WI/WebStorm+EAP
