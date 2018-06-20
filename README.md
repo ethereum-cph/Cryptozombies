@@ -16,7 +16,7 @@ https://medium.com/coinmonks/solidity-and-web3-js-141115b0f8c5
 - Install a text editor https://confluence.jetbrains.com/display/WI/WebStorm+EAP
 - Install a local webserver: npm i http-server
 
-If you would like to use Infura to not sync a local note use a HD wallet
+If you would like to use Infura to not sync a local node use a HD wallet
 http://truffleframework.com/tutorials/using-infura-custom-provider
 - Install HDwallet to use infura nodes: npm i truffle-hdwallet-provider
 - Note windows users if you get a MSBUILD error you have to install: npm install -g windows-build-tools
