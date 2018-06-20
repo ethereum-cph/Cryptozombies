@@ -14,7 +14,7 @@ https://medium.com/coinmonks/solidity-and-web3-js-141115b0f8c5
 - Install node & npm https://nodejs.org/en/ (version 8 or 9 is fine)
 - Install truffle from the command line: `npm install -g truffle`
 - Install a text editor https://confluence.jetbrains.com/display/WI/WebStorm+EAP
-- Install a local webserver: npm i http-server
+- Install a local webserver: `npm install -g http-server`
 
 If you would like to use Infura to not sync a local node use a HD wallet
 http://truffleframework.com/tutorials/using-infura-custom-provider
@@ -23,7 +23,7 @@ http://truffleframework.com/tutorials/using-infura-custom-provider
 
 ## Debugging the contracts
 - truffle development - launches a local blockchain
-Note windows users should type "truffle.cmd"
+Note windows users should type "truffle.cmd development"
 
 - You can deploy your contracts by using command "migrate"
 - The contract can be debugged as described here:
