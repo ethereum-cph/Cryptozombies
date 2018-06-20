@@ -42,3 +42,16 @@ truffle migrate --network development
 - launch web-server with command: http-server
 - Visit url with browser having metamask installed, unlocked and connected to it to Rinkeby network
 - In the console create your first zombie bt typing: createRandomZombie("SOME NAME")
+
+Display zombies
+getZombiesByOwner(userAccount)
+            .then(displayZombies);
+            
+Create zombie
+createRandomZombie("TEST NANE")
+
+Find zombie id
+getZombiesByOwner(userAccount)
+
+Transfer zombie
+transferZombie('0xf64e39c5911d22f0f87d35c0ab70fa105bab2ec3',4)
